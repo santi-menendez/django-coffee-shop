@@ -8,6 +8,11 @@
 </head>
 <body>
     <header>
+        {% if user.is_authenticated %} 
+            Hola, {{ user.username }} 
+        {% else %} 
+            <a href="{% url 'login' %}">Iniciar Sesión</a>
+        {% endif %}
         <h1 class="text-3xl font-bold underline">Coffee Shop</h1>
     </header>
 
