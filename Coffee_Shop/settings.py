@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "crispy_forms",
     "crispy_tailwind",
+    "rest_framework",
     "products",
     "users",
     "orders",
@@ -142,3 +143,11 @@ LOGOUT_REDIRECT_URL = (
     "list_product"  # Redirige a la página de inicio de sesión después del cierre
 )
 LOGIN_URL = "login"  # URL de inicio de sesión para la vista de cierre de sesión
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}
