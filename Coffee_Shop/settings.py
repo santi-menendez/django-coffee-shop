@@ -141,3 +141,4 @@ LOGIN_REDIRECT_URL = (
 LOGOUT_REDIRECT_URL = (
     "list_product"  # Redirige a la página de inicio de sesión después del cierre
 )
+LOGIN_URL = "login"  # URL de inicio de sesión para la vista de cierre de sesión
